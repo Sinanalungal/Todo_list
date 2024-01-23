@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Dancing+Script:wght@400;500&family=Inconsolata:wght@500;800&family=Love+Ya+Like+A+Sister&family=Meie+Script&family=Noto+Sans+JP&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+body{
+  font-family:'Inconsolata', monospace;
+  
+}
+/* .main-background{
+  background: rgb(0, 0, 0);
+} */

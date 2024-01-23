@@ -1,0 +1,41 @@
+
+.cardscreen {
+  display: flex;
+  flex-direction: row;
+  border: 3px solid hsl(0, 0%, 90%);
+  
+}
+
+.image {
+  width: 50%;
+
+  min-height: 50vh;
+}
+.todohead{
+  font-family: 'Love Ya Like A Sister', cursive;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  /* background: rgb(227, 217, 217); */
+  
+  /* border: 3px solid black; */
+}
+@media (max-width: 550px) {
+  .image{
+    display: none;
+
+  }
+  .card-content{
+    width: 100%;
+  }
+}
+@media (min-width: 550px) {
+  .image{
+    display: block;
+  }
+}
