@@ -15,7 +15,6 @@ function TodoMain() {
     const location=useLocation()
     const username=(new URLSearchParams(location.search).get('username')).toUpperCase();
 
-    // console.log(`"########################## ${User_name} ############################3333"`)
 
 
     function changebar(e){

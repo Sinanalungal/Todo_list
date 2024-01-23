@@ -1,4 +1,3 @@
-// TodoForm.jsx
 import React, { useState } from 'react';
 import "./TodoList.css";
 import image1 from "../../public/checklist-8493185_640.png"
@@ -21,6 +20,11 @@ function Todo() {
       navigate(`/todo?username=${encodeURIComponent(name.trim())}`)
     }
   }
+  function enterFunction(e){
+    if (e.key==='Enter'){
+      addUserName();
+    }
+  }
   return (
     <div className="main-background bg-gray-300 flex items-center justify-center min-h-screen hover:bg-gray-400 ">
       <div className="cardscreen w-full md:w-1/2 bg-white p-6 rounded-lg shadow-md">
@@ -39,10 +43,9 @@ function Todo() {
           </p>
           <div className="w-full mt-7">
           <form class="w-full max-w-sm">
-          <div class="flex items-center border-b border-t-neutral-950 py-1 mt-4 px-2">
+          <div class="flex items-center border-b border-t-neutral-950 py-1 mt-4 px-2" onKeyDown={(e)=>enterFunction(e)}>
             <input class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="Enter Your Name" aria-label="Full name" value={name} onChange={(e)=>changeName(e)}/>
         
-            {/* <Link to="/todo"> */}
               <button class="flex-shrink-0 border-transparent border-4  font text-black hover:text-teal text-sm py-1 px-2 rounded" type="button" onClick={()=>addUserName()}>
                   <Lottie
                     animationData={animation}
@@ -51,7 +54,6 @@ function Todo() {
                     style={{ width: 20, height: 15 }}
                   />
             </button>
-            {/* </Link> */}
           </div>
         </form>
             
