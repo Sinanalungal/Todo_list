@@ -22,7 +22,7 @@ function Todo() {
     }
   }
   return (
-    <div className="main-background flex items-center justify-center min-h-screen bg-gray-100 ">
+    <div className="main-background bg-gray-300 flex items-center justify-center min-h-screen hover:bg-gray-400 ">
       <div className="cardscreen w-full md:w-1/2 bg-white p-6 rounded-lg shadow-md">
         <div className='image p-1'>
           {/* <img className='mt-5' src={image2} alt="checklist"/> */}

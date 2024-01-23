@@ -92,9 +92,9 @@ function TodoMain() {
     }
   return (
     
-    <div className="main-background flex items-center mt-8 min-h-screen bg-white">
-      <div className="screen w-9/12 bg-white p-6 rounded-lg shadow-md">
-        <div className="header-sec">
+    <div className="main-background flex items-center  min-h-screen bg-white">
+      <div className="screen mt-5 w-9/12 bg-white p-6 rounded-lg shadow-md">
+        <div className="header-sec ">
           <h1 className="text-3xl font-extrabold todohead">{username}'S TODO LIST</h1>
           <div className="w-full max-w-sm mt-4">
             <div className="relative flex items-center" onKeyDown={(e) => handleKeyPress(e)}>
@@ -102,7 +102,7 @@ function TodoMain() {
                 type="text"
                 id="username"
                 className="w-full pl-8 pr-2 py-2 border rounded-md focus:outline-none focus:border-indigo-600"
-                placeholder="Enter your username" value={tas} onChange={(e)=>changebar(e)}
+                placeholder="Enter Tasks" value={tas} onChange={(e)=>changebar(e)}
               />
               <button  className="absolute right-0 px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-500"  onClick={()=>addTask()}>
                 Add
@@ -118,9 +118,9 @@ function TodoMain() {
               
                  (editingindex===index)?(<li key={index}>
                   
-                 <div className="items flex items-center justify-between hover:bg-gray-600 bg-gray-700 p-4 my-2 rounded-md">
+                 <div className="items flex items-center justify-between hover:bg-gray-100 bg-gray-100 p-4 my-2 rounded-md">
                  
-                 <input className="inputd" value={editvaluechange} onChange={(e)=>editValueChange(e)}></input>
+                 <input  className="inputd font-black" value={(editvaluechange).toUpperCase()} onChange={(e)=>editValueChange(e)}></input>
                  <div className="flex space-x-2">
                      <button className="px-2 py-1 bg-blue-500 text-white rounded-md ml-1 hover:bg-blue-400" onClick={()=>saveEditChanges(index)} >
                      Save
@@ -134,17 +134,17 @@ function TodoMain() {
      
                  </li>)
                  :(  <li key={index}>
-                  <div className="items flex items-center justify-between hover:bg-gray-600 bg-gray-700 p-4 my-2 rounded-md">
+                  <div className="items flex items-center justify-between bg-white p-4 my-2 rounded-md">
                       <input 
                           type="checkbox"
                           checked={item.completed}
                           className="mr-2 form-checkbox h-4 w-4 text-indigo-600"
                           onClick={() => taskCompletion(index)}
                       /> 
-                      {item.completed?<span className="task-name flex-grow text-left overflow-x-auto text-white">
-                          <del>{item.taskname}</del>
-                      </span>:<span className="task-name flex-grow text-left overflow-x-auto text-white">
-                          {item.taskname}
+                      {item.completed?<span className="font-black task-name flex-grow text-left overflow-x-auto text-black">
+                          <del>{(item.taskname).toUpperCase()}</del>
+                      </span>:<span className=" font-black task-name flex-grow text-left overflow-x-auto text-black">
+                          {(item.taskname).toUpperCase()}
                       </span>}
                       
                       <div className="flex items-center space-x-2">
